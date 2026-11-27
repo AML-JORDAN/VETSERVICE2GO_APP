@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PANTALLA DEL EMPLEADO: citas de todos los clientes (la llena EmpleadoActivity) -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Cabecera azul: el mismo color que la barra de empleados en la página web -->
+    <LinearLayout
+        android:id="@+id/headerEmpleado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#17346F"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="16dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VETSERVICE2GO · EMPLEADOS"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHolaEmpleado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Hola, empleado@vetservice2go.com"
+                android:textColor="#DCE6F5"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCerrarSesionEmpleado"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:backgroundTint="@color/periwinkle"
+            android:text="SALIR"
+            android:textColor="#1A103C"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Filtros: qué citas ver (cada uno es un texto con fondo redondeado) -->
+    <LinearLayout
+        android:id="@+id/filtrosEmpleado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/headerEmpleado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/btnFiltroPendientes"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/fondo_filtro"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Pendientes"
+            android:textColor="#17346F"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnFiltroCompletadas"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/fondo_filtro"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Completadas"
+            android:textColor="#17346F"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnFiltroRechazadas"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_filtro"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Rechazadas"
+            android:textColor="#17346F"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Lista de citas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTickets"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="32dp"
+        app:layout_constraintTop_toBottomOf="@id/filtrosEmpleado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Mensaje si no hay citas en el filtro elegido -->
+    <TextView
+        android:id="@+id/tvSinTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No hay citas aquí. 🎉"
+        android:textColor="#17346F"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/filtrosEmpleado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

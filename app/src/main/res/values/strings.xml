@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">VETSERVICE2GO.com</string>
+
+    <!-- Textos que se llenan con datos desde el código (getString con %1$s, %2$s...) -->
+
+    <!-- Tarjeta de una cita (Mis Citas y pantalla del empleado) -->
+    <string name="cita_titulo">Mascota «%1$s»%2$s · %3$s</string>
+    <string name="cita_precio">$%1$d MXN</string>
+    <string name="cita_fecha">📅 Fecha: %1$s</string>
+    <string name="cita_propietario">👤 Propietario: %1$s</string>
+    <string name="cita_cuenta">📧 Cuenta: %1$s</string>
+    <string name="cita_pendiente">🕓 Pendiente de atender</string>
+    <string name="cita_completada">✅ Completada por %1$s el %2$s</string>
+    <string name="cita_rechazada_cliente">❌ Rechazada por %1$s. Motivo: %2$s\nReagéndala para elegir otro día y hora.</string>
+    <string name="cita_rechazada_empleado">❌ Rechazada por %1$s. Motivo: %2$s\n⏳ Esperando a que el cliente la reagende</string>
+    <string name="sin_fecha">Sin fecha</string>
+
+    <!-- Fecha y hora -->
+    <string name="horario_disponible">🟢 Disponible   •   %1$s</string>
+    <string name="horario_ocupado">🔴 Ocupado   •   %1$s</string>
+    <string name="reagendar_paso">Reagendar cita</string>
+    <string name="reagendar_titulo">Nuevo día para %1$s</string>
+    <string name="reagendar_confirmar">CONFIRMAR NUEVA FECHA</string>
+
+    <!-- Resumen -->
+    <string name="resumen_propietario">Propietario: %1$s</string>
+    <string name="resumen_mascota">Mascota: %1$s</string>
+    <string name="resumen_fecha">Fecha de la cita: %1$s, %2$s</string>
+    <string name="resumen_servicios">Servicios: %1$s</string>
+    <string name="resumen_total">Total a pagar: $%1$d MXN</string>
+
+    <!-- Perfil -->
+    <string name="perfil_nombre_correo">%1$s\n%2$s</string>
+    <string name="perfil_citas">Tus citas registradas: %1$d</string>
+    <string name="perfil_sin_correo">Vuelve a iniciar sesión para ver tu correo</string>
+    <string name="perfil_cliente">👤 Cuenta de cliente</string>
+    <string name="perfil_empleado">🩺 Cuenta de empleado</string>
+
+    <!-- Aviso de la pantalla de inicio -->
+    <plurals name="aviso_rechazadas">
+        <item quantity="one">❌ Tienes %1$d cita rechazada. Toca aquí para reagendarla.</item>
+        <item quantity="other">❌ Tienes %1$d citas rechazadas. Toca aquí para reagendarlas.</item>
+    </plurals>
+
+    <!-- Pantalla del empleado -->
+    <string name="empleado_hola">Hola, %1$s</string>
+    <string name="filtro_pendientes">Pendientes (%1$d)</string>
+    <string name="filtro_completadas">Completadas (%1$d)</string>
+    <string name="filtro_rechazadas">Rechazadas (%1$d)</string>
+    <string name="motivo_hint">Motivo del rechazo</string>
+
+    <!-- Campos de los formularios -->
+    <string name="hint_nombre_completo">Nombre completo</string>
+    <string name="hint_peso">Peso (kg)</string>
+</resources>

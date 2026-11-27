@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Foto y datos de la cita -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Foto de la mascota (o ícono de cámara si no tiene) -->
+            <ImageView
+                android:id="@+id/ivMascotaItem"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="16dp"
+                android:background="#F3F1EA"
+                android:contentDescription="Foto de la mascota"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_camera"
+                app:tint="#757575" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTituloMascota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mascota «Max» (Perro) · Consulta General"
+                    android:textColor="#1A103C"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPrecioItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="$350 MXN"
+                    android:textColor="#1A103C"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvFechaItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="📅 Fecha: 21/11/2026 16:00 - 16:40"
+                    android:textColor="#1A103C"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvPropietarioItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="👤 Propietario: Ana López"
+                    android:textColor="#1A103C"
+                    android:textSize="14sp" />
+
+                <!-- Solo lo ve el empleado: de qué cuenta es la cita -->
+                <TextView
+                    android:id="@+id/tvCuentaItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="📧 Cuenta: ana@gmail.com"
+                    android:textColor="#555555"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Estado: pendiente, completada o rechazada (lo llena CitasAdapter) -->
+        <TextView
+            android:id="@+id/tvEstadoItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="🕓 Pendiente de atender"
+            android:textColor="#B7791F"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Botones: se muestran según el estado y quién ve la lista -->
+        <Button
+            android:id="@+id/btnCompletarItem"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/pearl_aqua"
+            android:text="MARCAR COMO COMPLETADA"
+            android:textColor="#1A103C"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnRechazarItem"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:text="RECHAZAR"
+            android:textColor="#A32F2F"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:strokeColor="#A32F2F" />
+
+        <Button
+            android:id="@+id/btnReagendarItem"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/pearl_aqua"
+            android:text="🔁 REAGENDAR"
+            android:textColor="#1A103C"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

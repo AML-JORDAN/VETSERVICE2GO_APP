@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Cabecera Superior -->
+    <LinearLayout
+        android:id="@+id/headerMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#5E176F"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VETSERVICE2GO.COM"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Panel Principal de Servicio Veterinario"
+            android:textColor="#F3E5F5"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Acciones Principales -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintTop_toBottomOf="@id/headerMain"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Aviso de citas rechazadas (lo muestra MainActivity solo si hay alguna) -->
+        <TextView
+            android:id="@+id/tvAvisoRechazadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/fondo_aviso"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="14dp"
+            android:text="❌ Tienes 1 cita rechazada. Toca aquí para reagendarla."
+            android:textColor="#A32F2F"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!-- Ilustración de mascotas jugando (res/drawable/mascotas_jugando.xml).
+             adjustViewBounds hace que la imagen ocupe todo el ancho sin deformarse. -->
+        <ImageView
+            android:id="@+id/ivMascotasJugando"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Un perro y un gato jugando con una pelota"
+            android:src="@drawable/mascotas_jugando" />
+
+        <Button
+            android:id="@+id/btnRegistrarCita"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/pearl_aqua"
+            android:text="REGISTRAR MASCOTA Y CITA"
+            android:textColor="#1A103C"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMisCitas"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/wisteria_blue"
+            android:text="VER MIS CITAS REGISTRADAS"
+            android:textColor="#1A103C"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Barra Inferior de Navegación: cada opción es un texto con su ícono arriba -->
+    <LinearLayout
+        android:id="@+id/bottomNavMain"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#FFFFFF"
+        android:baselineAligned="false"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/navInicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="2dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Inicio"
+            android:textColor="#26A69A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:drawableTint="#26A69A"
+            app:drawableTopCompat="@drawable/ic_nav_inicio" />
+
+        <TextView
+            android:id="@+id/navMisCitas"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="2dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Mis Citas"
+            android:textColor="#3A3A3A"
+            android:textSize="12sp"
+            app:drawableTint="#3A3A3A"
+            app:drawableTopCompat="@drawable/ic_nav_citas" />
+
+        <TextView
+            android:id="@+id/navRegistrar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="2dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Registrar"
+            android:textColor="#3A3A3A"
+            android:textSize="12sp"
+            app:drawableTint="#3A3A3A"
+            app:drawableTopCompat="@drawable/ic_nav_registrar" />
+
+        <TextView
+            android:id="@+id/navPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="2dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Perfil"
+            android:textColor="#3A3A3A"
+            android:textSize="12sp"
+            app:drawableTint="#3A3A3A"
+            app:drawableTopCompat="@drawable/ic_nav_perfil" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

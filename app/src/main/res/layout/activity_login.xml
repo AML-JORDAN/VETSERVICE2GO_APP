@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/logo_vet"
+        android:contentDescription="Logotipo de VETSERVICE2GO" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VETSERVICE2GO"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#5E176F"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
+        android:text="Inicia sesión según tu rol (Cliente o Empleado)"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/etCorreoLogin"
+        android:autofillHints="emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo o Usuario"
+        android:inputType="textEmailAddress"
+        android:textColor="#1A103C"
+        android:textColorHint="#7A7A7A"
+        android:backgroundTint="#80A1D4"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"
+        android:paddingBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etPasswordLogin"
+        android:autofillHints="password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#1A103C"
+        android:textColorHint="#7A7A7A"
+        android:backgroundTint="#80A1D4"
+        android:textSize="16sp"
+        android:layout_marginBottom="32dp"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="INGRESAR"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="#75C9C8"
+        android:textColor="#1A103C"
+        android:layout_marginBottom="40dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0CBD5"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes una cuenta?"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnIrRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="REGISTRARSE COMO USUARIO NUEVO"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:backgroundTint="#80A1D4"
+        android:textColor="#1A103C" />
+
+</LinearLayout>

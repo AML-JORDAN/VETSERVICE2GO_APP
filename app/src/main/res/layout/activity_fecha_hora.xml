@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:ignore="HardcodedText, Autofill">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Encabezado / Título -->
+        <TextView
+            android:id="@+id/tvPasoFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(3/3) Fecha y hora"
+            android:textSize="14sp"
+            android:textColor="#5E176F"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvTituloFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cuándo vamos?"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#5E176F"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Indícanos la fecha y hora de la cita con tu veterinario"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tarjeta contenedora del calendario y horarios -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:padding="12dp">
+
+            <!-- Calendario Nativo de Android -->
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Etiqueta informativa de hora seleccionada -->
+            <TextView
+                android:id="@+id/tvSeleccionaHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="↓ Selecciona un horario disponible:"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#2C2C2C"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Opciones de Horarios Disponibles (Diseñados como botones limpios).
+                 UnelevatedButton: botón plano con fondo propio, así backgroundTint sí lo pinta
+                 (blanco = libre, azul = elegido; lo cambia FechaHoraActivity.kt) -->
+            <Button
+                android:id="@+id/btnHorario1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🟢 Disponible   •   15:30 - 16:10"
+                android:textSize="14sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#2C2C2C"
+                android:gravity="start|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            <Button
+                android:id="@+id/btnHorario2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🟢 Disponible   •   16:00 - 16:40"
+                android:textSize="14sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#2C2C2C"
+                android:gravity="start|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            <Button
+                android:id="@+id/btnHorario3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🟢 Disponible   •   16:30 - 17:10"
+                android:textSize="14sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#2C2C2C"
+                android:gravity="start|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            <Button
+                android:id="@+id/btnHorario4"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🟢 Disponible   •   17:00 - 17:40"
+                android:textSize="14sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#2C2C2C"
+                android:gravity="start|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+        </LinearLayout>
+
+        <!-- Botón para confirmar cita (Pearl Aqua) -->
+        <Button
+            android:id="@+id/btnConfirmarCita"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="CONFIRMAR CITA"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="#75C9C8"
+            android:textColor="#1A103C"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+</ScrollView>

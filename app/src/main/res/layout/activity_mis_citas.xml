@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Cabecera Superior Morada -->
+    <LinearLayout
+        android:id="@+id/headerMisCitas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#5E176F"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VETSERVICE2GO.COM"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Mis Citas / Mascotas Registradas"
+            android:textColor="#F3E5F5"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Lista de Citas desde SQLite -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMisCitas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="14dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/headerMisCitas"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavCitas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Mensaje si aún no hay citas registradas -->
+    <TextView
+        android:id="@+id/tvSinCitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aún no tienes citas registradas."
+        android:textColor="#5E176F"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/headerMisCitas"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavCitas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Barra Inferior de Navegación: cada opción es un texto con su ícono arriba -->
+    <LinearLayout
+        android:id="@+id/bottomNavCitas"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#FFFFFF"
+        android:baselineAligned="false"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/navInicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="2dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Inicio"
+            android:textColor="#3A3A3A"
+            android:textSize="12sp"
+            app:drawableTint="#3A3A3A"
+            app:drawableTopCompat="@drawable/ic_nav_inicio" />
+
+        <TextView
+            android:id="@+id/navMisCitas"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="2dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Mis Citas"
+            android:textColor="#26A69A"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:drawableTint="#26A69A"
+            app:drawableTopCompat="@drawable/ic_nav_citas" />
+
+        <TextView
+            android:id="@+id/navRegistrar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="2dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Registrar"
+            android:textColor="#3A3A3A"
+            android:textSize="12sp"
+            app:drawableTint="#3A3A3A"
+            app:drawableTopCompat="@drawable/ic_nav_registrar" />
+
+        <TextView
+            android:id="@+id/navPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="2dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Perfil"
+            android:textColor="#3A3A3A"
+            android:textSize="12sp"
+            app:drawableTint="#3A3A3A"
+            app:drawableTopCompat="@drawable/ic_nav_perfil" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

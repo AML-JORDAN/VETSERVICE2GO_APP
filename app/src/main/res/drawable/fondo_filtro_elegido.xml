@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Filtro elegido: azul (el color de los empleados) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#17346F" />
+    <corners android:radius="22dp" />
+</shape>

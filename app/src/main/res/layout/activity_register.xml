@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro de Usuario"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#5E176F"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/etNombreRegistro"
+        android:autofillHints="name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_nombre_completo"
+        android:inputType="textPersonName|textCapWords"
+        android:textColor="#1A103C"
+        android:textColorHint="#7A7A7A"
+        android:backgroundTint="#80A1D4"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etCorreoRegistro"
+        android:autofillHints="emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:textColor="#1A103C"
+        android:textColorHint="#7A7A7A"
+        android:backgroundTint="#80A1D4"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etPasswordRegistro"
+        android:autofillHints="password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#1A103C"
+        android:textColorHint="#7A7A7A"
+        android:backgroundTint="#80A1D4"
+        android:layout_marginBottom="28dp"/>
+
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="REGISTRARSE"
+        android:textStyle="bold"
+        android:backgroundTint="#75C9C8"
+        android:textColor="#1A103C"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnVolverLogin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="REGRESAR AL LOGIN"
+        android:backgroundTint="#80A1D4"
+        android:textColor="#1A103C"/>
+
+</LinearLayout>

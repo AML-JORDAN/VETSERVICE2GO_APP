@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Android Studio 2026.1 trae el Android Gradle Plugin 9.4.1.
+         La versión 9.5 todavía no abre en ese Android Studio, así que nos quedamos
+         en 9.4.1 a propósito (para que el proyecto abra en cualquier computadora). -->
+    <issue id="AndroidGradlePluginVersion" severity="ignore" />
+</lint>

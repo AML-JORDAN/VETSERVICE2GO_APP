@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título idéntico a la imagen -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro de Cita y Mascota"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#5E176F"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Cuadro de la foto -->
+        <ImageView
+            android:id="@+id/ivFotoMascota"
+            android:contentDescription="Foto de la mascota"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@android:drawable/ic_menu_camera"
+            android:scaleType="centerCrop"
+            android:background="#E0DCDC"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Botón Subir Foto -->
+        <Button
+            android:id="@+id/btnSeleccionarFoto"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="SUBIR FOTO DE MASCOTA"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#80A1D4"
+            android:textColor="#1A103C"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Campos de Texto -->
+        <EditText
+            android:id="@+id/etNombrePropietario"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName|textCapWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del propietario"
+            android:textColorHint="#8A8A8A"
+            android:textColor="#1A103C"
+            android:backgroundTint="#80A1D4"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etNombreMascota"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de la mascota"
+            android:textColorHint="#8A8A8A"
+            android:textColor="#1A103C"
+            android:backgroundTint="#80A1D4"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etEspecieMascota"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Especie (Ej. Perro, Gato)"
+            android:textColorHint="#8A8A8A"
+            android:textColor="#1A103C"
+            android:backgroundTint="#80A1D4"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etRaza"
+            android:importantForAutofill="no"
+            android:inputType="textCapWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Raza"
+            android:textColorHint="#8A8A8A"
+            android:textColor="#1A103C"
+            android:backgroundTint="#80A1D4"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Peso en kg (se pide igual que en la página web) -->
+        <EditText
+            android:id="@+id/etPesoMascota"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_peso"
+            android:textColorHint="#8A8A8A"
+            android:textColor="#1A103C"
+            android:backgroundTint="#80A1D4"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Título de Servicios -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione los servicios:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#5E176F"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- CheckBoxes de Servicios -->
+        <CheckBox
+            android:id="@+id/cbConsulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consulta General ($350)"
+            android:textColor="#1A103C"
+            android:layout_marginBottom="4dp"/>
+
+        <CheckBox
+            android:id="@+id/cbVacunacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vacunación ($400)"
+            android:textColor="#1A103C"
+            android:layout_marginBottom="4dp"/>
+
+        <CheckBox
+            android:id="@+id/cbDesparasitacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Desparasitación ($250)"
+            android:textColor="#1A103C"
+            android:layout_marginBottom="4dp"/>
+
+        <CheckBox
+            android:id="@+id/cbBano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Baño y Estética ($300)"
+            android:textColor="#1A103C"
+            android:layout_marginBottom="4dp"/>
+
+        <CheckBox
+            android:id="@+id/cbUrgencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Urgencias ($600)"
+            android:textColor="#1A103C"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Botón Inferior -->
+        <Button
+            android:id="@+id/btnSeleccionarFechaHora"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="SELECCIONAR FECHA Y HORA"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#75C9C8"
+            android:textColor="#1A103C"/>
+
+    </LinearLayout>
+</ScrollView>
